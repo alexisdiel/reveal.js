@@ -5,6 +5,7 @@ var app = require('http').createServer(handler)
   ,mime=require('mime')
 
 app.listen(process.env.PORT||5000);
+console.log("Listening on port 5000")
 function handler (req, res) {
 	var uri = url.parse(req.url).pathname;
 	if(uri=='/'){
